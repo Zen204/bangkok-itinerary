@@ -1,0 +1,651 @@
+/* ===========================
+   Google Font Variables
+=========================== */
+/*hi
+*/
+:root{
+    --cream:#f9f5ef;
+    --white:rgba(255,255,255,.12);
+    --border:rgba(255,255,255,.22);
+    --gold:#E9C46A;
+    --green:#0B6E4F;
+    --text:#ffffff;
+    --shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    color:white;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    background:
+    linear-gradient(rgba(5,20,30,.72),rgba(5,20,30,.72)),
+    url("images/bangkok.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+/* =======================
+Animated Background
+======================= */
+
+.background-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    backdrop-filter:blur(2px);
+
+    z-index:-5;
+
+}
+
+.gradient-circle{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.35;
+
+    animation:float 18s infinite ease-in-out;
+
+    z-index:-2;
+
+}
+
+.circle1{
+
+    width:350px;
+    height:350px;
+
+    background:#00d4a5;
+
+    top:-80px;
+
+    left:-50px;
+
+}
+
+.circle2{
+
+    width:450px;
+
+    height:450px;
+
+    background:#E9C46A;
+
+    right:-120px;
+
+    bottom:-100px;
+
+    animation-delay:5s;
+
+}
+
+.circle3{
+
+    width:250px;
+
+    height:250px;
+
+    background:#5aa9ff;
+
+    top:45%;
+
+    left:45%;
+
+    animation-delay:9s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px) scale(1);
+
+}
+
+50%{
+
+transform:translateY(-50px) scale(1.12);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+Navbar
+=========================== */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+padding:22px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(16px);
+
+border-bottom:1px solid rgba(255,255,255,.12);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:1.5rem;
+
+font-weight:700;
+
+font-family:"Playfair Display",serif;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:var(--gold);
+
+}
+
+/* ===========================
+Hero
+=========================== */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:0 20px;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+animation:fadeUp 1.2s ease;
+
+}
+
+.small-title{
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+margin-bottom:18px;
+
+font-size:.9rem;
+
+color:#ffe7a6;
+
+}
+
+.hero h1{
+
+font-family:"Playfair Display",serif;
+
+font-size:5rem;
+
+line-height:1.1;
+
+margin-bottom:20px;
+
+}
+
+.hero h2{
+
+font-weight:300;
+
+font-size:1.4rem;
+
+opacity:.92;
+
+margin-bottom:45px;
+
+}
+
+.primary-button{
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(135deg,#E9C46A,#ffdb82);
+
+font-size:1rem;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:var(--shadow);
+
+}
+
+.primary-button:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* =======================
+Sections
+======================= */
+
+section{
+
+padding:90px 8%;
+
+}
+
+/* =======================
+Countdown
+======================= */
+
+.countdown-section{
+
+text-align:center;
+
+}
+
+.countdown-section h2{
+
+font-size:2.2rem;
+
+margin-bottom:45px;
+
+}
+
+.countdown{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+
+gap:25px;
+
+}
+
+.time-card{
+
+background:var(--white);
+
+backdrop-filter:blur(15px);
+
+border:1px solid var(--border);
+
+border-radius:25px;
+
+padding:40px;
+
+box-shadow:var(--shadow);
+
+transition:.3s;
+
+}
+
+.time-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.time-card span{
+
+font-size:3rem;
+
+font-weight:700;
+
+display:block;
+
+margin-bottom:10px;
+
+color:var(--gold);
+
+}
+
+/* =======================
+Glass Cards
+======================= */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.glass-card{
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+padding:35px;
+
+border-radius:24px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.glass-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.glass-card i{
+
+font-size:2rem;
+
+color:var(--gold);
+
+margin-bottom:18px;
+
+}
+
+.glass-card h3{
+
+margin-bottom:10px;
+
+}
+
+/* =======================
+Currency
+======================= */
+
+.converter{
+
+text-align:center;
+
+}
+
+.converter h2{
+
+font-size:2rem;
+
+margin-bottom:12px;
+
+}
+
+.converter-box{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+.converter input{
+
+width:180px;
+
+padding:18px;
+
+border:none;
+
+border-radius:18px;
+
+font-size:1.1rem;
+
+}
+
+.converter label{
+
+display:block;
+
+margin-bottom:10px;
+
+font-weight:600;
+
+}
+
+#swapButton{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+border:none;
+
+cursor:pointer;
+
+font-size:1.6rem;
+
+background:var(--gold);
+
+}
+
+
+
+/* =======================
+Navigation Cards
+======================= */
+
+.navigation-cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:30px;
+
+}
+
+.nav-card{
+
+text-decoration:none;
+
+color:white;
+
+padding:40px;
+
+background:rgba(255,255,255,.12);
+
+border-radius:24px;
+
+text-align:center;
+
+transition:.35s;
+
+border:1px solid rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+}
+
+.nav-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.nav-card i{
+
+font-size:2.5rem;
+
+margin-bottom:20px;
+
+color:var(--gold);
+
+}
+
+/* =======================
+Footer
+======================= */
+
+footer{
+
+padding:50px;
+
+text-align:center;
+
+opacity:.75;
+
+}
+
+/* =======================
+Animations
+======================= */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =======================
+Responsive
+======================= */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:3rem;
+
+}
+
+.hero h2{
+
+font-size:1.1rem;
+
+}
+
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+padding:18px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+section{
+
+padding:70px 5%;
+
+}
+
+}
